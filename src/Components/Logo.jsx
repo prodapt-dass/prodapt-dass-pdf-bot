@@ -8,7 +8,7 @@ const Logo = ({ isCollapsed }) => {
 <path d="M0 0H37V37" fill="#EB262A"/>
 </svg>
         
-      {!isCollapsed && <span className="logo-text" style={{fontSize:"14px"}}>GEN AI</span>}
+      {!isCollapsed && <span className="logo-text" style={{fontSize:"14px"}}>AI Crafter</span>}
     </div>
   );
 };

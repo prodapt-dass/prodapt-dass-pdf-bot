@@ -1,11 +1,9 @@
 import React from "react";
 import "../Styles/Home.css";
-import { useState } from "react";
+// import { useState } from "react";
 import { VscSend } from "react-icons/vsc";
 
 
-import star from '../Assets/Home-png/Star.png'
-import fallingStar from "../Assets/Home-png/Falling star.png";
 
 import deal from "../Assets/Home-svg/Dealsheet.svg";
 import monitor from '../Assets/Home-svg/Monitoring.svg';
@@ -53,7 +51,7 @@ const Home = ({ isLeftSidebarCollapsed }) => {
 
     const navigate =useNavigate();
 
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (event) => {
     if (event.key === "Enter") {
@@ -77,15 +75,15 @@ const icons = [
       <div
         className="container"
         style={{
-          marginLeft: isLeftSidebarCollapsed ? "11%" : "16%",
-          width: isLeftSidebarCollapsed ? "73%" : "68%",
+          marginLeft: isLeftSidebarCollapsed ? "24%" : "30%",
+          width: isLeftSidebarCollapsed ? "73%" : "67%",
         }}
       >
         <div
           className="container-heading"
-          style={{
-            marginTop: isLeftSidebarCollapsed ? "5%" : "5%",
-          }}
+          // style={{
+          //   marginTop: isLeftSidebarCollapsed ? "5%" : "5%",
+          // }}
         >
           {/* <img src={star} alt="Star" className="star-image" /> */}
 
@@ -93,38 +91,45 @@ const icons = [
           {/* <img src={fallingStar} alt="Star" className="fallingStar-image" /> */}
           {/* <div className="container-header2">Project Management AI</div> */}
           <div className="container-header3">
-            
+            Step into the world of endless possibilities! Welcome to our chat
+            space.
           </div>
         </div>
 
         {/* Icons, Titles, and Cards in a Single Row */}
-        {/* <div className="icons-titles-and-cards">
-          {cards.map((card, index) => (
-            <div className="icon-title-and-cards" key={index}>
-              <div className="icon-and-title">
+        
+          <div className="icons-titles-and-cards">
+            {cards.map((card, index) => (
+              <div className="icon-title-and-cards" key={index}>
+                {/* <div className="icon-and-title">
                 {icons[index]}
                 <h3>{card.title}</h3>
-              </div>
-              <div className="cards">
-                <div className="card">
-                  <p>{card.description1}</p>
+              </div> */}
+                <div className="cards">
+                  <div className="card">
+                    <p>{card.description1}</p>
+                  </div>
+                  <div className="card">
+                    <p>{card.description2}</p>
+                  </div>
                 </div>
-                <div className="card">
-                  <p>{card.description2}</p>
-                </div>
               </div>
-            </div>
-          ))}
-        </div> */}
+            ))}
+          </div>
+        
 
         {/* Search bar */}
         <div
           className="container-search-bar"
           style={{ marginTop: isLeftSidebarCollapsed ? "2%" : "2%" }}
         >
-          <input type="text" placeholder="Enter Message" onKeyDown={handleSearch}/>
+          <input
+            type="text"
+            placeholder="Enter Message..."
+            onKeyDown={handleSearch}
+          />
           <div className="container-search-icon" onClick={handleSearch}>
-            <VscSend size={18} />
+            <VscSend size={20} />
           </div>
         </div>
       </div>

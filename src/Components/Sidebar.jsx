@@ -11,7 +11,6 @@ import chatData from "../Data/chatData.json";
 import Logo from "../Components/Logo";
 import Home from "../Pages/Home";
 
-import HomeSearch from "../Pages/HomeSearch";
 import { useNavigate } from "react-router-dom";
 
 const DualSidebar = () => {
@@ -37,7 +36,7 @@ const DualSidebar = () => {
   };
 
   const goToComp = () => {
-    navigate("/side");
+    // navigate("/side");
   };
 
   return (
